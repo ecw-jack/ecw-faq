@@ -15,5 +15,11 @@ and corrections.
 
 ## Who runs this?
 
-"Jack / Blackbird" from the ECW Discord
+"Jack / Blackbird" from the ECW Discord, currently.
 
+## Key Links
+
+- ECW Discord: https://discord.com/invite/enigma89
+- ECW Patreon: https://www.patreon.com/enigma89
+- ECW YouTube channel: https://youtube.com/@Enigma89
+- Hexmap: http://hex.moelan.net/
