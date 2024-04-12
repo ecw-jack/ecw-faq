@@ -1,1 +1,6 @@
-site_name: ECW Community FAECW Community FAQ
+site_name: ECW Community FAQ
+site_url: https://ecw-faq.readthedocs.io
+nav:
+  - Home: index.md
+  - FAQ: faq.md
+theme: readthedocs

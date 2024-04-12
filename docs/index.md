@@ -19,7 +19,7 @@ and corrections.
 
 ## Key Links
 
-- ECW Discord: https://discord.com/invite/enigma89
-- ECW Patreon: https://www.patreon.com/enigma89
-- ECW YouTube channel: https://youtube.com/@Enigma89
-- Hexmap: http://hex.moelan.net/
+- ECW Discord: <https://discord.com/invite/enigma89>
+- ECW Patreon: <https://www.patreon.com/enigma89>
+- ECW YouTube channel: <https://youtube.com/@Enigma89>
+- Hexmap: <http://hex.moelan.net/>
