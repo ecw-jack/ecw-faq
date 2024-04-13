@@ -4,3 +4,6 @@ nav:
   - Home: index.md
   - FAQ: faq.md
 theme: readthedocs
+markdown_extensions:
+    - toc:
+        permalink: True
