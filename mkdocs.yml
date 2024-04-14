@@ -2,8 +2,16 @@ site_name: ECW Community FAQ
 site_url: https://ecw-faq.readthedocs.io
 nav:
   - Home: index.md
-  - FAQ: faq.md
+  - Server: server.md
+  - Radios: radio.md
 theme: readthedocs
 markdown_extensions:
-    - toc:
-        permalink: True
+  - toc:
+      permalink: True
+  - kbdextension
+plugins:
+  - mkdocs-video:
+      css_style:
+        aspect-ratio: "16/10"
+        width: "100%"
+        height: "auto"
