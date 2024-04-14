@@ -15,5 +15,5 @@ mkdocs:
 
 python:
   install:
-    - requirements: python_requirements.txt
+    - requirements: python-requirements.txt
 
