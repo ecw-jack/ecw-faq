@@ -1,14 +1,13 @@
 site_name: ECW Community FAQ
 site_url: https://ecw-faq.readthedocs.io
 nav:
-  - Home: index.md
-  - Server: server.md
-  - Radios: radio.md
+  - FAQ: index.md
 theme: readthedocs
 markdown_extensions:
   - toc:
       permalink: True
   - kbdextension
+  - attr_list
 plugins:
   - mkdocs-video:
       css_style:
