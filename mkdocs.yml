@@ -2,6 +2,13 @@ site_name: ECW Community FAQ
 site_url: https://ecw-faq.readthedocs.io
 nav:
   - FAQ: index.md
+  - Aircraft:
+    - A-4: aircraft/a-4.md
+    - Mi-8: aircraft/mi-8.md
+    - Mi-24: aircraft/mi-24.md
+    - Mirage F1: aircraft/mirage_f1.md
+    - SA342: aircraft/sa342.md
+    - Others: aircraft/other.md
 theme: readthedocs
 markdown_extensions:
   - toc:

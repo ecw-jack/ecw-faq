@@ -1,6 +1,6 @@
 # ECW Community FAQ
 
-This is a community-run FAQ for the Enigma's Cold War DCS server.
+This is an **unofficial** community-run FAQ for the Enigma's Cold War DCS server.
 
 It is not the [Official FAQ](https://docs.google.com/presentation/d/1I-aD-s3zoEpV4gGu7QIrEdywkpklfT40te-mYlX3zk8)
 but aims to include all the information from it and more.
@@ -20,7 +20,7 @@ For example the link to this question is <https://ecw-faq.readthedocs.io/en/late
 
 ### Key Links {: #links }
 
-| <!-- --> | <!-- --> |
+| <!-- -->          | <!-- --> |
 --------------------|-----------
 Official FAQ        | [on Google Docs](https://docs.google.com/presentation/d/1I-aD-s3zoEpV4gGu7QIrEdywkpklfT40te-mYlX3zk8/)
 ECW Discord         | <https://discord.com/invite/enigma89>
@@ -29,12 +29,15 @@ ECW YouTube channel | <https://youtube.com/@Enigma89>
 Hexmap              | <https://hex.moelan.net/>
 IFF guide           | [on Google Docs](https://docs.google.com/presentation/d/12hlVFNbwhzzPAnMnmT-uFSgLZDoziXorwtMNklJyON8/)
 GitHub for this FAQ | <https://github.com/ecw-jack/ecw-faq>
+Community A-4 mod   | <https://github.com/heclak/community-a4e-c>
 
 ## About the server {: #server }
 
 ### What is ECW?
 
 ECW is Enigma's Dynamic Cold War Campaign. It is a PVP DCS server and community where Red and Blu players fight for control of the map, sector by sector. Player stats are tracked and can be seen in the Discord server. You can earn points for certain actions and spend them to summon AI support aircraft and unlock advanced aircraft for yourself.
+
+The server uses the [Community A-4 mod](aircraft/a-4).
 
 Watch the server trailer:
 
@@ -147,44 +150,6 @@ Unlike some other popular DCS servers, traffic calls are not required and strong
 
 If someone does make a traffic call, thank them for their passion and support.
 
-### Aircraft Specific Guides
-
-(These will be split out into separate documents)
-
-#### Mi-8
-
-The Mi-8 has two communication radios we care about. The primary radio (R-863) for normal U/VHF and the secondary radio (R-828) for the 30.0 MHz FM channel used by other helicopters.
-
-1. Primary radio pedestal controls:
-    - PRESET/MANUAL switch to PRESET
-    - Maximise volume
-2. Secondary radio controls (on right cockpit wall, next to countermeasures panel):
-    - Power switch to ON
-3. Use primary radio channel selector on overhead in front of pilot to switch between preset channels
-4. Radio selector on overhead in front of your seat:
-    - Maximise volumes
-    - RADIO/ICS switch to RADIO
-    - Choose primary (R-863) or secondary (R-828) radios to transmit on
-
-You may also want to turn on your signal flares (power switches and circuit breaker) and set up binds for the different colour flares, and use them to help friendlies find/ID you, or to give a fireworks display when your door gunner shoots down an F-14 :)
-
-#### Mi-24
-
-The Mi-24 is like the Mi-8 but simpler.
-
-1. Turn on radio switches on pilot cockpit left sidewall
-2. Adjust volumes on primary radio panel and radio selector panel
-3. Use selector knob to select transmission on primary and secondary radio
-
-#### Mirage F1
-
-1. Main (Green) radio _(TRAP 136)_:
-    - Mode selector knob to PAL+G
-    - Frequency selector knob to P
-2. Secondary (Red) radio _(TRAP137B)_:
-    - Mode selector to M
-3. Click on audio panel knobs to select transmission on primary and secondary radio
-
 ## Campaign
 
 ### Round structure {: #server-tick }
@@ -198,6 +163,10 @@ Each side has two capital sectors. When one side captures both of the other's ca
 Each side starts with 1,000 Health Points, split between **frontline units**, **depots**, **factories**, and **infrastructure**. They are lost as units are destroyed.
 
 At the end of the round, the side with the most HP remaining is the winner, and the difference in HP determines how many sectors the winner captures.
+
+Both sides' health points can be seen in-game via the Radio Menu > [[F10]] > [[F3]] Campaign Overview, or in the left sidebar of the [hexmap](https://hex.moelan.net/) under the scales icon:
+
+![Hexmap showing healthbars](img/hexmap-healthbars.png)
 
 ### Attrition
 
@@ -242,15 +211,15 @@ Successful CSAR of downed pilots reduces attrition.
 | MI-8MTV2 Hip       | 0.70 |
 
 ### Frontline Targets
-These are small unit groups that can be found along the border of the frontline. These respawn at the end of each round (every 2 hours). They account for 400HP - 40% of a side’s health.
+These are small unit groups that can be found along the border of the frontline. These respawn at the end of each round (every 2 hours). They account for 500HP - 50% of a side’s health.
 
 These groups consist of a barracks block and some vehicles, sometimes including AAA and MANPADs, and sometimes also bunkers. For maximum effectiveness the whole group should be wiped out.
 
 ### Depots
-Front depots are logistical targets, protected by SAM sites. These respawn when the mission is reset (every 4 hours). They account for 250HP - 25% of a side’s health.
+Front depots are logistical targets, protected by SAM sites. These respawn when the mission is reset (every 4 hours). They account for 200HP - 20% of a side’s health.
 
 ### Factories/Industrial {: #factories }
-Factories are industry targets, protected by SAM sites. These respawn when the mission is reset (every 4 hours). They account for 250HP - 25% of a side’s health.
+Factories are industry targets, protected by SAM sites. These respawn when the mission is reset (every 4 hours). They account for 200HP - 20% of a side’s health.
 
 On mission reset, surviving factories repair other ground units (including factories) to a limited amount. Destroyed units are queued, and each factory will repair a certain number of units.
 
@@ -288,22 +257,6 @@ If an airfield is in a sector that's next to an enemy sector, it is a "frontline
 ECW permits attacking airfields, and aircraft on the ground / taking off / landing. However you will not inflict attrition on the other side for destroying aircraft on the ground.
 
 As the runway may be cratered with Durandels or similar, it is always permitted to take off/land on taxiways or other hard surfaces. Keep a good lookout and be considerate!
-
-#### Home Airfields:
-
-Syria:
-
- - Aleppo
- - Hama
- - Renee
- - Damascus
- - Beirut
- - King Hussein
-
-Caucasus:
-
- - Maykop
- - Kutaisi/Senaki
 
 ### SAMs & Air Defenses {: #SAM-defenses }
 Airfields, Depots, and Factories may protected by SAMs. The further away a point of interest is from the frontline the stronger the SAM defenses will be.
@@ -355,11 +308,11 @@ Red troops weigh 120kg, and Blue troops weigh 100kg. (This is due to inadequate 
 | SA342 Gazelle | 3     |          | X   | X     | X    |
 | AH-64 Apache  | Nil   |          |     |       |      |
 
-### Infantry types
+### Infantry squad types {: #squads }
 
 | Type          | Squad size | Mission                                | Range   | Time  |
 |---------------|------------|----------------------------------------|---------|-------|
-| Infantry      | 4          | Destroy frontline units                | 4km     | 3 min |
+| Standard      | 4          | Destroy frontline units                | 4km     | 3 min |
 | SOF           | 3          | Destroy backline units                 | 2km     | 8 min |
 | Recon         | 2          | Reveal enemy units                     | 12.5km* | 5 min |
 | CSAR (friend) | 1          | Reduce attrition on RTB                | -       | -     |
@@ -379,15 +332,15 @@ Troops are supposed to start running towards their target but due to apparent bu
 
 When choosing a landing location, it can be very useful to use the ruler on the [[F10]] theatre map. Click `ft>m` on the top toolbar to change the units from NM to km. Drag a line from the target location that's just under the squad's range, and position the other end somewhere that looks safe and/or in range of more targets. Then fly to land at the other end of that line.
 
-#### Standard
+#### Standard {: #standard-squad }
 Standard squads come in groups of 4 and are used for attacking frontline platoons. They will target the nearest 4 units within a 4km range from where they were dropped. After 3 minutes, the targetted units will explode, and the squad will be ready for pickup.
 
 If you drop 2 or 3 squads at the same time, they will pick 8 or 12 separate targets (not the same 4 nearest targets).
 
-#### SOF
+#### SOF {: #sof-squad }
 SOF squads come in groups of 3 and are used to destroy hard targets behind enemy lines. They will sabotage revealed infrastructure, depots, and factory buildings. They destroy 1 building per troop and have a 2km range. They have an on mission time of 8 minutes.
 
-#### Recon
+#### Recon {: #recon-squad}
 Recon squads come in groups of 2 and will reveal infrastructure or frontline troops within a 12k.5m radius (for troops) or 25km (for infrastructure) from where they were dropped. Recon have a 5 minutes on mission time.
 
 There is no benefit to dropping more than one recon squad at a time. However, after a server restart or after a tick, when the frontline units have reset, it can be very powerful to carry multiple recon squads and drop them every 10-20km across enemy sectors.
@@ -398,9 +351,11 @@ The map marker for other players' JTACs give a good hint where another recon squ
 
 #### JTAC
 
-JTACs appear when [recon squads](#recon) are dropped by helicopters. They will pick a unique ID, a GBU lasing code, and a smoke colour. Then they will target a nearby enemy unit with smoke and laser designator. When the unit is destroyed, the smoke and lase move to another nearby target.
+JTACs appear when [recon squads](#recon-squad) are dropped by helicopters. They will pick a unique ID, a lasing code, and a smoke colour. Then they will target a nearby enemy unit with smoke and laser designator. When the unit is destroyed, the smoke and lase move to another nearby target.
 
 The smoke is useful for identifying enemy targets, but the smoke can also obscure other targets and is a giveaway to the other team that helicopters are active in that sector.
+
+JTACs are represented as immobile, invulnerable infantrymen. They cannot be picked up (but if you pick up a recon squad and drop them again, they will generate another JTAC at the new drop site). When they run out of nearby targets, the infantryman disappears.
 
 JTACs appear on the [[F10]] theatre map as a player marker orange circle.
 
@@ -478,9 +433,8 @@ Players that friendly fire other players will lose 10 credits.
 
 To see your credit balance, type `-credits` in in-game chat or `/credits info` in Discord. (You can also donate credits to other players with `/credits donate`.)
 
-### Restricted aircraft
-
-In some campaigns, there are limited slots for high-performance aircraft that require a credits deposit to fly:
+### Credit aircraft
+In some campaigns, there are some restricted slots for high-performance aircraft that require a [credits](#campaign-credits) deposit to fly:
 
 | Aircraft    | Deposit    |
 |-------------|------------|
@@ -492,7 +446,7 @@ You will be charged the deposit on taking the slot, and the deposit is returned 
 
 The F-14A WSO slot does not require credits.
 
-### Credit call-ins
+### Credit call-ins {: #call-in }
 
 Credit Call-ins are AI aircraft you can request with the credits earned from destroying ground units. There are four missions they can perform: 
 
@@ -509,13 +463,13 @@ In the map marker comment, type in the mission type (in uppercase) and the code,
 
 You can also earn credits by shooting down enemy call-in aircraft.
 
-### Recon
+### Recon {: #recon-call-in }
 Recon aircraft spawn two sectors back over a friendly airfield. They fly over the sector where you placed the F10 map marker, then will RTB. If they make it back, all non-frontline targets will be marked.
 
 Cost: 10
 Bounty: 2 (F-4E) or 5 (MiG-25)
 
-### SEAD
+### SEAD {: #sead-call-in }
 SEAD (Suppression of Enemy Air Defenses) aircraft spawn two sectors back over a friendly airfield. They will engage the airfield SAM systems nearest the F10 map marker.
 
 As they seem to prioritise the EWR radar and as there's usually multiple SAM batteries, multiple SEAD flights are required to completely wipe out the airfield SAMs.
@@ -523,7 +477,7 @@ As they seem to prioritise the EWR radar and as there's usually multiple SAM bat
 Cost: 10
 Bounty: 2
 
-### REPAIR
+### REPAIR {: #repair-call-in}
 Repair planes spawn at the rear of your area. They fly over the sector where you placed the F10 map marker and then fly low. They will repair all SAMs and airfields.
 
 Cost: 10
@@ -537,21 +491,11 @@ Bounty: 5
 
 Each side also has a permanent, invulnerable AWACS orbiting behind their capital cities. They can be distinguished from call-in AWACS because they are flying outside the sectors, not within one.
 
-### BOMBER
+### BOMBER {: #bomber-call-in}
 Bombers spawn at the rear of your area, and can only be sent to enemy sectors which contain factories. They spawn in flights of four, and if at least one bomber survives to reach the factory, the factory is entirely destroyed.
  
 Cost: 40 (includes 4 bombers)
 Bounty: 5 per bomber
-
-## A-4 mod
-
-This server now supports the [Community A-4 module](https://github.com/heclak/community-a4e-c)
-
-Install instructions follow:
-
-- Download [the latest official A-4E-C release package](https://github.com/heclak/community-a4e-c/releases/). Do not download directly from the Github repository.
-- Place the 'Mods\aircraft\A-4E-C' folder in into your Windows user folder's Saved Games folder for DCS, e.g. 'C:\Users\username\Saved Games\DCS'
-- If you have installed other DCS World mods, you might already have the 'Mods' and 'aircraft' folders indicated in the file path. If so, merge the new A-4E-C folder into the existing folders.
 
 ## Stats
 
@@ -589,7 +533,7 @@ This means if you friendly fire a player aircraft with 1 hour played on the serv
 
 Friendly fire is a constant hazard in the Cold War setting. Check the [IFF Guide](https://docs.google.com/presentation/d/12hlVFNbwhzzPAnMnmT-uFSgLZDoziXorwtMNklJyON8/) to try and avoid incidents!
 
-### Forgiveness
+### Forgiveness {: #forgive }
 
 If you are killed by a friendly aircraft and you do not consider it to be the other pilot's fault, you can cancel their penalty via in-game chat: `-forgive RayBanJockey` (using the other player's name).
 
@@ -665,30 +609,41 @@ There is a 1980s Persian Gulf scenario ready to go, geared around the upcoming F
 
 Look at the `#map-status` and `#campaign-win-log` channels to get an idea of how long the campaigns last and what campaigns are currently in rotation. It will be Caucasus again within two weeks, be sure.
 
+### I was teamkilled! How do I report this? {: #teamkill }
+
+You don't need to report teamkills normally - the offending player will get [punished automatically](#penalty-system). (If you are teamkilled and you consider it a honest mistake or not your teammate's fault, you can [forgive](#forgive) your teammate.)
+
+If the other player is evading the penalty somehow, or griefing in some innovative way, go to the `#bans-and-reports` channel on the ECW Discord and start a new thread. It would probably be helpful to provide screenshots/recordings to demonstrate what happened. Look in the `#server-chat` channel for a log of game events.
+
 ### Will X mod be allowed (SU-17, F-104, etc)? {: #add-mod }
-NO. If you ask in Discord you will get timed out.
+No. If you ask in Discord you will get timed out.
 
 ### Will X Module be added in? {: #add-module }
-The F-4 and Mig-23 will be added in immediately barring any game-breaking bugs related to them. Any other early-to-mid cold war plane (A-6, Mig-17, etc) will most likely be added in as well. ECW staff will only answer questions regarding new modules once they are available to purchase.
+The Heatblur F-4 and Razbam Mig-23 will be added in immediately barring any game-breaking bugs related to them. Any other early-to-mid cold war plane (A-6, Mig-17, etc) will most likely be added in as well. ECW staff will only answer questions regarding new modules once they are available to purchase.
+
+The F-4 is expected to be extremely popular for a time after launch. It may initially be a restricted [credit aircraft](#credit-aircraft) with a nominal cost.
+
+### Will FC4 aircraft be added? {: #fc4 }
+Flaming Cliffs 2024 (FC4) will introduce new simplified versions of the F-5, F-86, and MiG-15. Server staff have made it clear these simplified versions of existing modules will _not_ be added to the server, in part because it's a huge chore to add the slots and find spawning locations for every airfield in each scenario. If FC4 evolves to include new simplified Cold War aircraft, these will probably be added, however.
+
+### Why did I see an Su-27? {: #su-27 }
+"...and it was at a Blue airbase?" or "...and I got kicked when I shot it down?"
+
+That's an A-4. If you don't have the [A-4 mod](aircraft/a-4.md) installed, you will see A-4s as Su-27s.
+
+### Why did I see an F-4E? {: #prerelease-f4 }
+"...has the Heatblur module been released early for ECW?"
+
+Those are AI F-4s [called in](#call-in) by other players for [SEAD](#sead-call-in) or [recon](#recon-call-in)
+
+### Why is the AH-64 in the server? {: #ah64-april-fools }
+The AH-64 Apache was introduced on 01 April 2024 as an [April Fools](#april-fools) experiment. It looks like it may be here to stay, as a stand-in for the Cobra. It cannot equip the FCR or radar-guided Hellfires. It is the only MFD aircraft on the server.
+
+### What's April Fools about? {: april-fools }
+The server staff use April Fools Day (April 01) to trial weird ideas temporarily and see how they affect the server. In 2023 it was to introduce the AIM-54 for the F-14A [credits aircraft](#credit-aircraft). In 2024 it was to introduce the [AH-64](#ah64-april-fools).
 
 ### Is Tacview supported? {: #tacview }
 No, it was disabled to save frames.
-
-### How to update to Open Beta {: #open-beta}
-Steam:
-
-1. Open Steam and go to your library
-2. Right click on DCS and select properties
-3. Select the betas tab and chose "openbeta - Public beta versions"
-4. Download the update.
-
-Standalone:
-
-1. Go into the dcs\bin folder
-2. Hold Lshift and right click somewhere in the folder
-3. Click on "open PowerShell window here" 
-4. Type .\DCS_updater.exe update '@openbeta' and press enter
-5. Download the update
 
 ### What is combat logging? {: #combat-logging }
 
@@ -724,6 +679,11 @@ Tip: Check the [IFF Guide](https://docs.google.com/presentation/d/12hlVFNbwhzzPA
 
 For more info see [Penalties](#penalty-system).
 
+### The server chat shows me doing a bunch of stuff I didn't do! {: #chat-name-bug }
+There's a known bug where sometimes the in-game chat will give your name to another player's action, e.g. "Urist McFaqreader in F-5 killed RayBanJockey in MiG-19" when you did no such thing. This will usually be the actions of another player in the same aircraft type.
+
+You can usually see an accurate message history in the `#server-chat` Discord channel.
+
 ### How do I bind a glance-at-map button? {: #map-bind }
 
 DCS has a poorly documented feature: as well as binding actions for when you press a HOTAS button, you can also bind an action for when you release the button. Pressing the button will have a name like `JOY_BTN23`. If you open the drop-down list when binding an action, you will see `JOY_BTN23_OFF` just next to it - this is the "release button" action.
@@ -747,3 +707,11 @@ If Discord commands like `/statistics`, `/credits`, `/penalty` don't work for yo
 ### Who made this?
 
 "Jack / Blackbird" from the [ECW Discord](https://discord.com/invite/enigma89) made this unilaterally. Contributions welcome - find me on Discord or [via GitHub](https://github.com/ecw-jack/ecw-faq/issues)
+
+### In memoriam
+
+- DCS Open Beta, which the server used to run on. ED ended the Open Beta in early 2024 and switched to a six-week update schedule for the standard DCS
+- Overlordbot, a voice-interface AWACS system you'd speak to via SRS
+- Callsigns with flight and aircraft numbers e.g. "Urist 1-1", which were required by Overlordbot, but now are only really used for as a style choice
+- Splash damage script, which would destroy units near an exploding weapon
+- Viggen self-destruct script, which would detonate any Viggen exceeding a certain unrealistic speed, exploiting a FM bug which is now fixed
